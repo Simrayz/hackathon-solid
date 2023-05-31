@@ -14,9 +14,11 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+import {useSession} from "~/utils";
 
 export default function Root() {
   const location = useLocation();
+
   const active = (path: string) =>
     path == location.pathname
       ? "border-sky-600"

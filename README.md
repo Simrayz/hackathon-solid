@@ -1,20 +1,18 @@
-# SolidStart
+# Hackathon with SolidStart
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+This project is implemented with SolidJS, powered by [`solid-start`](https://start.solidjs.com)
 
-## Creating a project
+The scope of the project is currently unknown, but the following technologies are to be used:
 
-```bash
-# create a new project in the current directory
-pnpm init solid@latest
-
-# create a new project in my-app
-pnpm init solid@latest my-app
-```
+* [Auth.JS](https://authjs.dev/) for session based authentication
+* [TailwindCSS](https://tailwindcss.com/) for inline css styling
+* [Vitest](https://vitest.dev/) for unit tests
+* [Zod](https://zod.dev/) for environment and schema validation
+* (Maybe) [Kobalte](https://kobalte.dev/docs/core/overview/introduction) component library for SolidJS
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Install dependencies with `pnpm install`, and start the development server:
 
 ```bash
 pnpm run dev
@@ -27,4 +25,9 @@ pnpm run dev -- --open
 
 Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
 
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+By default, `pnpm run build` will generate a Node app that you can run with `pnpm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+
+## Resources
+
+* [Good example REPO with auth](https://github.com/lordnox/solid-start-starter/tree/main)
+* [Component Party](https://component-party.dev/) to compare SolidJS syntax with React (select on the top)

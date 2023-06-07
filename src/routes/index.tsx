@@ -30,7 +30,7 @@ export default function Home() {
         <button onClick={() => signIn("azure-ad")}>Login with Azure</button>
       </p>
       <p>
-        <button onClick={() => signOut()}>Logout</button>
+        <button onClick={() => signOut("azure-ad")}>Logout</button>
       </p>
       <div>
         <pre>{JSON.stringify(user(), null, 2)}</pre>

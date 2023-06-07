@@ -9,26 +9,31 @@ const pwaOptions: Partial<VitePWAOptions> = {
   base: '/',
   includeAssets: ['favicon.ico', 'robots.txt'],
   manifest: {
-    name: 'bat',
-    short_name: 'bat',
-    description: 'Opinionated, batteries included, PWA using Solid and Vite',
-    theme_color: '#202A37',
+    name: 'Carweb GO',
+    short_name: 'CWGO',
+    description: 'A PWA for Carweb using Solid and Vite',
+    theme_color: '#1b1c1d',
     icons: [
       {
-        src: 'pwa-192x192.png',
+        src: 'android-chrome-192x192.png',
         sizes: '192x192',
         type: 'image/png',
       },
       {
-        src: 'pwa-512x512.png',
+        src: 'android-chrome-512x512.png',
         sizes: '512x512',
         type: 'image/png',
       },
       {
-        src: 'pwa-512x512.png',
+        src: 'android-chrome-512x512.png',
         sizes: '512x512',
         type: 'image/png',
         purpose: 'any maskable',
+      },
+      {
+        src: 'apple-touch-icon.png',
+        size: '180x180',
+        type: 'image/png'
       }
     ]
   },

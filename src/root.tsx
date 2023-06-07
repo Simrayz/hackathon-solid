@@ -12,9 +12,10 @@ import {
   Routes,
   Scripts,
   Title,
+  Link,
 } from "solid-start";
 import "./root.css";
-import {useSession} from "~/utils";
+import { useSession } from "~/utils";
 
 export default function Root() {
   const location = useLocation();
@@ -26,9 +27,17 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
+        <Title>Hackathon Solid</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Link rel="manifest" href="/manifest.webmanifest" />
+        <Meta
+          name="description"
+          content="Opinionated, batteries included, PWA using Solid and Vite"
+        />
+        <Link rel="icon" href="/favicon.ico" type="image/png" sizes="16x16" />
+        <Link rel="apple-touch-icon" href="/pwa-192x192.png" sizes="192x192" />
+        <Meta name="theme-color" content="#202A37" />
       </Head>
       <Body>
         <Suspense>

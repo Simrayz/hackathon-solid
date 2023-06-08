@@ -1,20 +1,26 @@
 import { IconCar } from "~/components/icons/IconCar";
-import { IconsDots } from "~/components/icons/IconsDots";
 import { IconClock } from "~/components/icons/IconClock";
+import { format } from "date-fns";
 
-type Props = {
-  title: string;
+export type Task = {
+  time: Interval;
   regNr: string;
-  time: { from: string; to: string };
+  title: string;
+  metadata: {
+    created: Date;
+    createdBy: string;
+  };
 };
 
-export const TaskCard = (props: Props) => {
+type Interval = {
+  start: Date;
+  end: Date;
+};
+
+export const TaskCard = (props: Task) => {
   return (
-    <div class="border-2 border-black p-3 m-2">
-      <div class="flex justify-between">
-        <h2 class="text-xl font-bold">{props.title}</h2>
-        <IconsDots class="m-1" />
-      </div>
+    <div class="border-2 border-black border-[#EA8F5E] rounded-md p-3 my-1.5">
+      <h2 class="text-xl font-bold mb-2.5">{props.title}</h2>
 
       <div class="flex flex-row justify-between">
         <div class="flex flex-row">
@@ -25,7 +31,8 @@ export const TaskCard = (props: Props) => {
         <div class="flex flex-row">
           <IconClock class="mr-1.5" />
           <p class="font-semibold">
-            {props.time.from} - {props.time.to}
+            {`${format(props.time.start, "hh:mm")} - 
+            ${format(props.time.end, "hh:mm")}`}
           </p>
         </div>
       </div>

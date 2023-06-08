@@ -17,8 +17,10 @@ import "@fontsource/poppins";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
+import { useRegisterSW } from "virtual:pwa-register/solid";
 
 export default function Root() {
+  useRegisterSW();
   return (
     <Html lang="en">
       <Head>

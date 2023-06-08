@@ -1,8 +1,8 @@
 export function AppHeader() {
   return (
     <header class="py-4 px-6 flex items-center justify-between">
-      <img src="/carweb-go-large.png" alt="Carweb GO" class="h-12" />
-      <button class="rounded-full p-2 hover:bg-gray-200">
+      <img src="/carweb-go-large.png" alt="Carweb GO" class="h-10" />
+      <button title="notifications" class="rounded-full p-2 hover:bg-gray-200">
         <BellIcon class="h-6 w-6" />
       </button>
     </header>

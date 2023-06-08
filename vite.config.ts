@@ -11,6 +11,7 @@ const pwaOptions: Partial<VitePWAOptions> = {
     short_name: "CWGO",
     description: "A PWA for Carweb using Solid and Vite",
     theme_color: "#1b1c1d",
+    display: "standalone",
     icons: [
       {
         src: "android-chrome-192x192.png",

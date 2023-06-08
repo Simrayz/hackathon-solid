@@ -24,6 +24,13 @@ export default function Root() {
       <Head>
         <Title>Carweb GO</Title>
         <Meta charset="utf-8" />
+        <Meta name="mobile-web-app-capable" content="yes" />
+        <Meta name="apple-mobile-web-app-capable" content="yes" />
+        <Meta
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover,"
+          name="viewport"
+        />
+
         <Meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no"
@@ -34,15 +41,17 @@ export default function Root() {
           name="description"
           content="A PWA for Carweb using Solid and Vite"
         />
+        <Meta name="theme-color" content="#1b1c1d" />
+
+        <Link rel="manifest" href="/manifest.webmanifest" />
         <Link rel="icon" href="/favicon.ico" type="image/png" sizes="16x16" />
         <Link
           rel="apple-touch-icon"
           href="/apple-touch-icon.png"
           sizes="192x192"
         />
-        <Meta name="theme-color" content="#1b1c1d" />
       </Head>
-      <Body class="fixed top-0 bottom-0 left-0 right-0 text-font-default">
+      <Body>
         <Suspense>
           <ErrorBoundary>
             <Routes>

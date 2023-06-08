@@ -42,5 +42,5 @@ const pwaOptions: Partial<VitePWAOptions> = {
 };
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({}) }), VitePWA(pwaOptions)],
+  plugins: [solid({ adapter: vercel({}), ssr: false }), VitePWA(pwaOptions)],
 });

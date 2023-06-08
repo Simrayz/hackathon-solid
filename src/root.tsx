@@ -27,7 +27,7 @@ export default function Root() {
         <Meta name="mobile-web-app-capable" content="yes" />
         <Meta name="apple-mobile-web-app-capable" content="yes" />
         <Meta
-          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover, user-scalable=no"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover,"
           name="viewport"
         />
         <Meta

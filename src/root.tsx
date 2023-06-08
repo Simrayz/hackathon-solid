@@ -17,15 +17,15 @@ import "@fontsource/poppins";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
-import { useRegisterSW } from "virtual:pwa-register/solid";
 
 export default function Root() {
-  useRegisterSW();
   return (
     <Html lang="en">
       <Head>
         <Title>Carweb GO</Title>
         <Meta charset="utf-8" />
+        <Meta name="mobile-web-app-capable" content="yes" />
+        <Meta name="apple-mobile-web-app-capable" content="yes" />
         <Meta
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover, user-scalable=no"
           name="viewport"

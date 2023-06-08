@@ -34,7 +34,7 @@ export default function Root() {
         />
         <Meta name="theme-color" content="#1b1c1d" />
       </Head>
-      <Body>
+      <Body class="fixed top-0 bottom-0 left-0 right-0">
         <Suspense>
           <ErrorBoundary>
             <Routes>

@@ -25,22 +25,22 @@ export default function Root() {
         <Title>Carweb GO</Title>
         <Meta charset="utf-8" />
         <Meta
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover,user-scalable=no"
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no"
         />
-
-        <Link rel="manifest" href="/manifest.webmanifest" />
         <Meta
           name="description"
           content="A PWA for Carweb using Solid and Vite"
         />
+        <Meta name="theme-color" content="#1b1c1d" />
+
+        <Link rel="manifest" href="/manifest.webmanifest" />
         <Link rel="icon" href="/favicon.ico" type="image/png" sizes="16x16" />
         <Link
           rel="apple-touch-icon"
           href="/apple-touch-icon.png"
           sizes="192x192"
         />
-        <Meta name="theme-color" content="#1b1c1d" />
       </Head>
       <Body>
         <Suspense>

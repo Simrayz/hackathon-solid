@@ -24,7 +24,11 @@ export default function Root() {
       <Head>
         <Title>Carweb GO</Title>
         <Meta charset="utf-8" />
-        <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no"
+        />
+
         <Link rel="manifest" href="/manifest.webmanifest" />
         <Meta
           name="description"
@@ -38,7 +42,7 @@ export default function Root() {
         />
         <Meta name="theme-color" content="#1b1c1d" />
       </Head>
-      <Body class="fixed top-0 bottom-0 left-0 right-0">
+      <Body>
         <Suspense>
           <ErrorBoundary>
             <Routes>

@@ -5,7 +5,7 @@ type CardProps = ParentProps<{ class?: string }>;
 export function Card(props: CardProps) {
   return (
     <div
-      class={`rounded-lg p-3 border border-ui-button bg-white ${props.class}`}
+      class={`rounded-lg p-3 border border-ui-border bg-white ${props.class}`}
     >
       {props.children}
     </div>

@@ -10,7 +10,8 @@ module.exports = {
         ui: {
           title: "#418E92",
           button: "#A8D6D2",
-          date: "#CEE6E5"
+          date: "#CEE6E5",
+          border: "#EA8F5E"
         }
       }
     }

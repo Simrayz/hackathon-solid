@@ -12,7 +12,7 @@ export const AppShell = (props: ParentProps<unknown>) => {
   return (
     <main class="flex flex-col h-[100dvh]">
       <AppHeader />
-      <div class={"flex-1"}>{props.children}</div>
+      <div class="flex-1 px-6">{props.children}</div>
       <BottomNav />
     </main>
   );

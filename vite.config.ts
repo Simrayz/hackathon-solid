@@ -1,7 +1,6 @@
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
 import { VitePWA, VitePWAOptions } from "vite-plugin-pwa";
-import mkcert from'vite-plugin-mkcert'
 import vercel from "solid-start-vercel"
 
 
@@ -44,12 +43,8 @@ const pwaOptions: Partial<VitePWAOptions> = {
 }
 
 export default defineConfig({
-  server: {
-    https: true,
-  },
   plugins: [
     solid({ adapter: vercel({})}),
     VitePWA(pwaOptions),
-    mkcert()
   ],
 });

@@ -9,6 +9,11 @@ type Props = {
 };
 
 export const AppShell = (props: ParentProps<unknown>) => {
+  window.addEventListener("scroll", (e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+  });
+
   return (
     <main class="flex flex-col h-[100dvh]">
       <AppHeader />

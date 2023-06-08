@@ -11,6 +11,9 @@ dependencies:
   '@auth/solid-start':
     specifier: ^0.1.1
     version: 0.1.1(@auth/core@0.2.5)(solid-js@1.7.2)(solid-start@0.2.26)
+  '@fontsource/poppins':
+    specifier: ^5.0.2
+    version: 5.0.2
   '@solidjs/meta':
     specifier: ^0.28.2
     version: 0.28.2(solid-js@1.7.2)
@@ -1632,6 +1635,10 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@fontsource/poppins@5.0.2:
+    resolution: {integrity: sha512-504RESq2qbyVxxpjP2TyVQODOWakuBHBD3AtYurtmNHosC4x+mjyOlRSdW2QjsILezlwFCnLkYuGUzYiV44sEg==}
+    dev: false
 
   /@hapi/hoek@9.3.0:
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}

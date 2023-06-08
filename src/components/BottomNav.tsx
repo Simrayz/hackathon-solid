@@ -2,25 +2,35 @@ import { JSX } from "solid-js";
 import { A } from "solid-start";
 import { IconHome } from "~/components/icons/IconHome";
 import { IconCheck } from "~/components/icons/IconCheck";
+import { IconCar } from "./icons/IconCar";
 
 export const BottomNav = () => {
   return (
-    <div class="flex flex-row justify-around p-4">
-      <NavButton label={"Hjem"} to="/" icon={<IconHome />} />
+    <div class="flex flex-row justify-around py-4">
+      <NavButton label={"Hjem"} to="/" icon={<IconHome />} exact />
+      <NavButton label="Biler" to="/vehicles" icon={<IconCar />} />
       <NavButton label={"Oppgaver"} to="/tasks" icon={<IconCheck />} />
     </div>
   );
 };
 
-type Button = { label: string; icon?: JSX.Element; to?: string };
+type NavButtonProps = {
+  label: string;
+  icon?: JSX.Element;
+  to?: string;
+  exact?: boolean;
+};
 
-const NavButton = ({ icon, to, label }: Button) => {
+const NavButton = ({ icon, to, label, exact }: NavButtonProps) => {
   return (
-    <div class="flex flex-col justify-center items-center">
+    <A
+      href={to ?? ""}
+      class="text-slate-800 flex flex-col justify-center items-center gap-1"
+      activeClass="text-ui-title"
+      end={exact}
+    >
       {icon}
-      <A href={to ?? ""} class="text-slate-800 ml-1.5">
-        <p class="text-xs mt-1">{label}</p>
-      </A>
-    </div>
+      <p class="text-xs">{label}</p>
+    </A>
   );
 };

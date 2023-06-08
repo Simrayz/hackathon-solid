@@ -4,10 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        font: {
+          default: "#172B2E"
+        },
         ui: {
-          text: "#418E9",
+          title: "#418E92",
           button: "#A8D6D2",
-          date: "#CEE6E5"
+          date: "#CEE6E5",
+          border: "#EA8F5E"
         }
       }
     }

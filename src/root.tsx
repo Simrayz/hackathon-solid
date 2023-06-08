@@ -30,6 +30,13 @@ export default function Root() {
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover,"
           name="viewport"
         />
+
+        <Meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, user-scalable=no"
+        />
+
+        <Link rel="manifest" href="/manifest.webmanifest" />
         <Meta
           name="description"
           content="A PWA for Carweb using Solid and Vite"

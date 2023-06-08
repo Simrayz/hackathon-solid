@@ -24,6 +24,7 @@
   "dependencies": {
     "@auth/core": "^0.2.5",
     "@auth/solid-start": "^0.1.1",
+    "@fontsource/poppins": "^5.0.2",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
     "solid-js": "^1.7.2",

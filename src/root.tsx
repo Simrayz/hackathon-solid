@@ -13,6 +13,7 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+import "@fontsource/poppins";
 
 export default function Root() {
   return (

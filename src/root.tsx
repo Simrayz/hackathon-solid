@@ -13,19 +13,12 @@ import {
   Scripts,
   Title,
   Link,
+  redirect,
 } from "solid-start";
 import "./root.css";
-import { useSession } from "~/utils";
-import { signIn } from "@auth/solid-start/client";
 
 export default function Root() {
   const location = useLocation();
-  const session = useSession();
-
-  if (!session()?.user) {
-    signIn("azure-ad");
-  }
-
   const active = (path: string) =>
     path == location.pathname
       ? "border-sky-600"

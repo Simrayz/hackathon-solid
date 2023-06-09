@@ -2,6 +2,7 @@ import { JSX } from "solid-js";
 import { BottomNav } from "~/components/BottomNav";
 import { ParentProps } from "solid-js/types/server/rendering";
 import { AppHeader } from "~/components/AppHeader";
+import { ReloadPrompt } from "./Reload";
 
 type Props = {
   bottomNav?: JSX.Element;
@@ -14,6 +15,7 @@ export const AppShell = (props: ParentProps<unknown>) => {
       <AppHeader />
       <div class="flex-1 px-6">{props.children}</div>
       <BottomNav />
+      <ReloadPrompt />
     </main>
   );
 };

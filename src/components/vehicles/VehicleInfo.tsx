@@ -1,21 +1,43 @@
-export function VehicleInfo() {
+import { Vehicle } from "~/api";
+
+type VehicleInfoProps = {
+  vehicle: Vehicle;
+};
+export function VehicleInfo({ vehicle }: VehicleInfoProps) {
   return (
     <div class="space-y-4">
       <div>
-        <h1 class="font-bold">UX64290</h1>
-        <p>Renault Clio 2014</p>
+        <h1 class="font-bold">{vehicle.registrationNumber}</h1>
+        <p>
+          {vehicle.data.brand} {vehicle.data.model} {vehicle.data.modelYear}
+        </p>
       </div>
-      <div class="w-full h-40 bg-gray-400 rounded-lg" />
-      <VehicleLocation />
+      <div class="rounded-lg overflow-hidden">
+        <img
+          src={
+            vehicle.image ??
+            "https://hsvdatabase.com.au/wp-content/uploads/2018/05/placeholder.png"
+          }
+          class="h-40 w-full object-cover object-center"
+          alt="image of the vehicle"
+        />
+      </div>
+      <VehicleLocation vehicle={vehicle} />
     </div>
   );
 }
 
-function VehicleLocation() {
+type VehicleLocationProps = {
+  vehicle: Vehicle;
+};
+
+function VehicleLocation({ vehicle }: VehicleLocationProps) {
   return (
     <div class="flex items-center gap-1">
       <MapPin />
-      <p>Poleringshall, Tempevegen 11</p>
+      <p>
+        {vehicle.location?.name}, {vehicle.location?.address}
+      </p>
     </div>
   );
 }

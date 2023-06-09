@@ -4,11 +4,17 @@ export const vehiclesData: Vehicle[] = [
   {
     id: "a96498a4-aa08-4803-a3ef-b402ae109586",
     registrationNumber: "UX12345",
+    image: "/renault-clio-2014.jpeg",
     data: {
       brand: "Renault",
       model: "Clio",
       variant: "TCe 90 Dynamique",
       modelYear: 2014,
+    },
+    location: {
+      id: "aaed9506-10fd-4a22-b02c-eaa6c6c53dc0",
+      name: "Poleringshall",
+      address: "Tempevegen 11",
     },
     tasks: [
       {
@@ -40,6 +46,13 @@ export const vehiclesData: Vehicle[] = [
   {
     id: "067c96b7-4cea-41ef-8466-88b658fb212c",
     registrationNumber: "EL80085",
+    image:
+      "https://cdn.euroncap.com/media/4875/tesla_model_s_2014_uncrashed.jpg",
+    location: {
+      id: "aaed9506-10fd-4a22-b02c-eaa6c6c53dc0",
+      name: "Verksted",
+      address: "Tempevegen 11",
+    },
     data: {
       brand: "Tesla",
       model: "Model S",
@@ -81,6 +94,13 @@ export const vehiclesData: Vehicle[] = [
       model: "3-Serie",
       variant: "318i",
       modelYear: 1999,
+    },
+    image:
+      "https://www.hagerty.co.uk/wp-content/uploads/2021/03/1998-bmw-3-series-603a6884a1130.jpg",
+    location: {
+      id: "aaed9506-10fd-4a22-b02c-eaa6c6c53dc0",
+      name: "Parkering B",
+      address: "Tempevegen 11",
     },
     tasks: [
       {

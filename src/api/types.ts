@@ -1,9 +1,16 @@
 export type Vehicle = {
   id: string;
   registrationNumber: string;
+  image?: string;
+  location?: VehicleLocation;
   data: VehicleData;
   tasks: VehicleTask[];
   responsibleSalesPerson: ResponsibleSalesPerson;
+};
+export type VehicleLocation = {
+  id: string;
+  name: string;
+  address: string;
 };
 export type VehicleData = {
   brand: string;

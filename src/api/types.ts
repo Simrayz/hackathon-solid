@@ -5,6 +5,7 @@ export type Vehicle = {
   location?: VehicleLocation;
   data: VehicleData;
   tasks: VehicleTask[];
+  keys: VehicleKey[];
   responsibleSalesPerson: ResponsibleSalesPerson;
 };
 export type VehicleLocation = {
@@ -28,4 +29,13 @@ export type VehicleTask = {
 export type ResponsibleSalesPerson = {
   id: string;
   name: string;
+};
+export type VehicleKey = {
+  id: string;
+  location?: {
+    id: string;
+    name: string;
+  };
+  responsible?: ResponsibleSalesPerson;
+  updatedAt: string;
 };

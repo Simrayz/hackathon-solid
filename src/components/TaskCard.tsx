@@ -20,18 +20,18 @@ type Interval = {
 
 export const TaskCard = (props: Task) => {
   return (
-    <Card class="my-2">
+    <Card class="my-2 bg-white">
       <Card.Title>{props.title}</Card.Title>
-      <Card.Content>
+      <Card.Content class="mt-2">
         <div class="flex flex-row justify-between">
           <div class="flex flex-row">
-            <IconCar class="my-auto mr-2" />
-            <p class="font-semibold">XD42069</p>
+            <IconCar class="my-auto mr-1" />
+            <p>XD42069</p>
           </div>
 
           <div class="flex flex-row">
             <IconClock class="mr-1.5" />
-            <p class="font-semibold">
+            <p>
               {`${format(props.time.start, "hh:mm")} - 
             ${format(props.time.end, "hh:mm")}`}
             </p>

@@ -16,7 +16,9 @@ export const AppShell = (props: ParentProps<Props>) => {
       <Show when={!props.hideHeader}>
         <AppHeader />
       </Show>
-      <div class="flex-1 px-6 overflow-auto relative">{props.children}</div>
+      <div class="flex flex-col flex-1 px-6 overflow-auto relative">
+        {props.children}
+      </div>
       <BottomNav />
       <ReloadPrompt />
     </main>

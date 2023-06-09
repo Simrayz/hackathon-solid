@@ -5,13 +5,15 @@ import vercel from "solid-start-vercel";
 
 const pwaOptions: Partial<VitePWAOptions> = {
   base: "/",
+  registerType: "prompt",
   includeAssets: ["favicon.ico", "robots.txt"],
   manifest: {
     name: "Carweb GO",
-    short_name: "CWGO",
+    short_name: "Carweb GO",
     description: "A PWA for Carweb using Solid and Vite",
     theme_color: "#1b1c1d",
     display: "standalone",
+    scope: "/",
     icons: [
       {
         src: "android-chrome-192x192.png",
@@ -43,5 +45,5 @@ const pwaOptions: Partial<VitePWAOptions> = {
 };
 
 export default defineConfig({
-  plugins: [solid({ adapter: vercel({}) }), VitePWA(pwaOptions)],
+  plugins: [solid({ adapter: vercel({}), ssr: false }), VitePWA(pwaOptions)],
 });

@@ -4,13 +4,13 @@ import { createSignal, For, Show } from "solid-js";
 import { tasksByDate } from "~/routes/tasks/tasks";
 
 const weekdays = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
+  "Mandag",
+  "Tirsdag",
+  "Onsdag",
+  "Torsdag",
+  "Fredag",
+  "Lørdag",
+  "Søndag",
 ];
 
 export default function TasksPage() {
@@ -20,16 +20,16 @@ export default function TasksPage() {
 
   return (
     <AppShell>
-      <div class="flex flex-col px-5">
-        <p class="text-xl font-semibold">June</p>
-        <div class="flex flex-row w-full justify-between mt-2">
+      <div class="flex flex-col ">
+        <p class="text-xl font-semibold">Juni</p>
+        <div class="flex flex-row w-full justify-between mt-2 px-0.5">
           {weekdays.map((wd, i) => (
             <Day
-              active={i + 9 === activeDate()}
-              disabled={(tasksByDate[i + 9]?.length ?? 0) === 0}
-              monthDay={i + 9}
+              active={i + 5 === activeDate()}
+              disabled={(tasksByDate[i + 5]?.length ?? 0) === 0}
+              monthDay={i + 5}
               weekDay={wd}
-              onClick={() => setActiveDate(i + 9)}
+              onClick={() => setActiveDate(i + 5)}
             />
           ))}
         </div>

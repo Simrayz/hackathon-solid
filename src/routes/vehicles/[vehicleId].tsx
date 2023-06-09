@@ -17,7 +17,7 @@ export default function VehiclePage() {
     <AppShell>
       <div class="flex flex-col gap-4">
         <VehicleInfo vehicle={vehicle} />
-        <VehicleKeys />
+        <VehicleKeys keys={vehicle.keys} />
         <VehicleTasks />
       </div>
     </AppShell>

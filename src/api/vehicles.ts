@@ -16,6 +16,24 @@ export const vehiclesData: Vehicle[] = [
       name: "Poleringshall",
       address: "Tempevegen 11",
     },
+    keys: [
+      {
+        id: "blablabla",
+        location: {
+          id: "skap-b29",
+          name: "Skap B29",
+        },
+        updatedAt: "2022-06-09T07:45:00.000Z",
+      },
+      {
+        id: "blablabla",
+        responsible: {
+          id: "a50cb76a-c40f-4cc4-855b-ac2b1ed976cc",
+          name: "Steve Holt",
+        },
+        updatedAt: "2022-06-09T08:45:00.000Z",
+      },
+    ],
     tasks: [
       {
         id: "631b0bb0-c158-4880-ac44-8aa83060a6ed",
@@ -59,6 +77,24 @@ export const vehiclesData: Vehicle[] = [
       variant: "60",
       modelYear: 2014,
     },
+    keys: [
+      {
+        id: "key-1",
+        responsible: {
+          id: "53ce23e3-0a5a-4331-95d2-c2ea4d2946ad",
+          name: "Ken-Roger Amundsen",
+        },
+        updatedAt: "2022-06-09T10:45:00.000Z",
+      },
+      {
+        id: "key-2",
+        responsible: {
+          id: "a50cb76a-c40f-4cc4-855b-ac2b1ed976cc",
+          name: "Steve Holt",
+        },
+        updatedAt: "2022-06-09T08:45:00.000Z",
+      },
+    ],
     tasks: [
       {
         id: "1271a50a-7a75-4e55-b314-2652df72f959",
@@ -102,6 +138,24 @@ export const vehiclesData: Vehicle[] = [
       name: "Parkering B",
       address: "Tempevegen 11",
     },
+    keys: [
+      {
+        id: "key-1",
+        location: {
+          id: "skap-b29",
+          name: "Skap A11",
+        },
+        updatedAt: "2022-06-09T10:45:00.000Z",
+      },
+      {
+        id: "key-2",
+        location: {
+          id: "skap-b29",
+          name: "Skap A12",
+        },
+        updatedAt: "2022-06-09T08:45:00.000Z",
+      },
+    ],
     tasks: [
       {
         id: "e19ae03a-2b00-4e43-9277-4d1afd7bca7d",

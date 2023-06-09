@@ -26,11 +26,11 @@ const NavButton = ({ icon, to, label, exact }: NavButtonProps) => {
     <A
       href={to ?? ""}
       class="text-slate-800 flex flex-col justify-center items-center gap-1"
-      activeClass="text-ui-title"
+      activeClass="text-ui-active"
       end={exact}
     >
       {icon}
-      <p class="text-xs">{label}</p>
+      <p class="text-xs font-medium">{label}</p>
     </A>
   );
 };

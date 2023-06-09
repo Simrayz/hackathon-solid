@@ -13,11 +13,8 @@ const weekdays = [
   "Sunday",
 ];
 
-// Group tasks by date.
-// And sort tasks by time within groups.
-
 export default function TasksPage() {
-  const [activeDate, setActiveDate] = createSignal(13);
+  const [activeDate, setActiveDate] = createSignal(9);
 
   const dayTasks = () => tasksByDate[activeDate()] ?? [];
 

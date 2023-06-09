@@ -22,7 +22,7 @@ type Interval = {
 
 export const TaskCard = (props: Task) => {
   return (
-    <Card class="my-2 bg-white">
+    <Card class="my-4 bg-white">
       <Card.Title>{props.title}</Card.Title>
       <Card.Content class="mt-2">
         <div class="flex flex-row justify-between">

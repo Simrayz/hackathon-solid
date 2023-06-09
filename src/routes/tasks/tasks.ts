@@ -72,7 +72,7 @@ export const tasksByDate: Record<MonthDay, Task[]> = {
       title: "Støvsuging",
     },
   ],
-  12: [
+  13: [
     {
       metadata: { createdBy: "Ludwig", created: new Date() },
       regNr: "xd42069",

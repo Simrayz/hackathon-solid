@@ -18,6 +18,8 @@ type Interval = {
   end: Date;
 };
 
+// We actually have a couple of task cards now...
+
 export const TaskCard = (props: Task) => {
   return (
     <Card class="my-2 bg-white">

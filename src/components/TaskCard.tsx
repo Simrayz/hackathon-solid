@@ -27,7 +27,7 @@ export const TaskCard = (props: Task) => {
     animate(
       ".taskk",
       { opacity: [0.07, 1], y: [-20, 0], transform: "none" },
-      { easing: "ease-in-out", duration: 0.34 }
+      { easing: "ease-in-out", duration: 0.3 }
     );
   });
 

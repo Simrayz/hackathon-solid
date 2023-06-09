@@ -1,11 +1,24 @@
-import { For } from "solid-js";
+import { createEffect, For } from "solid-js";
 import { A } from "solid-start";
 import { Vehicle, VehicleService } from "~/api";
 import { AppShell } from "~/components/AppShell";
 import { Card } from "~/components/Card";
+import { animate } from "motion";
 
 export default function VehiclesPage() {
   const vehicles = VehicleService.getVehicles();
+
+  createEffect(() => {
+    animate(
+      ".carcard",
+      {
+        opacity: [0.07, 1],
+        transformOrigin: ["0 20", "0 0"],
+        transform: "none",
+      },
+      { easing: "ease-in-out", duration: 0.3 }
+    );
+  });
 
   return (
     <AppShell>
@@ -15,7 +28,7 @@ export default function VehiclesPage() {
           <For each={vehicles}>
             {(vehicle) => (
               <A href={"/vehicles/" + vehicle.id} class="group">
-                <Card class="group-hover:bg-gray-50 space-y-2">
+                <Card class="group-hover:bg-gray-50 space-y-2 carcard">
                   <Card.Title class="flex items-center gap-2 text-ui">
                     <CarIcon />
                     <span>{vehicle.registrationNumber}</span>

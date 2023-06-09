@@ -1,18 +1,21 @@
-import { JSX } from "solid-js";
+import { JSX, Show } from "solid-js";
 import { BottomNav } from "~/components/BottomNav";
 import { ParentProps } from "solid-js/types/server/rendering";
 import { AppHeader } from "~/components/AppHeader";
 import { ReloadPrompt } from "./Reload";
 
 type Props = {
+  hideHeader?: boolean;
   bottomNav?: JSX.Element;
   content?: JSX.Element;
 };
 
-export const AppShell = (props: ParentProps<unknown>) => {
+export const AppShell = (props: ParentProps<Props>) => {
   return (
     <main class="flex flex-col h-[100dvh]">
-      <AppHeader />
+      <Show when={!props.hideHeader}>
+        <AppHeader />
+      </Show>
       <div class="flex-1 px-6 overflow-auto relative">{props.children}</div>
       <BottomNav />
       <ReloadPrompt />

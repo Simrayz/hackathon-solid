@@ -5,11 +5,18 @@ module.exports = {
     extend: {
       colors: {
         font: {
-          default: "#172B2E"
+          default: "#172B2E",
+          pink: "#EF888C"
         },
         ui: {
           title: "#418E92",
-          button: "#A8D6D2",
+          
+          active: "#187176",
+          button: {
+            default: "#A8D6D2",
+            orange: "#F2B06B",
+            pink: "#F0A8AB"
+          },
           date: "#CEE6E5",
           border: "#EA8F5E"
         }

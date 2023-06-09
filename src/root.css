@@ -8,5 +8,8 @@
     }
     body {
         background-color: #F6FAFB;
+        background-image: url("/ellipsis.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
     }
 }

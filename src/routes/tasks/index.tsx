@@ -1,7 +1,8 @@
 import { AppShell } from "~/components/AppShell";
 import { TaskCard } from "~/components/TaskCard";
-import { createSignal, For, Show } from "solid-js";
+import { createEffect, createSignal, For, Show } from "solid-js";
 import { tasksByDate } from "~/routes/tasks/tasks";
+import { animate, inView } from "motion";
 
 const weekdays = [
   "Mandag",
@@ -34,7 +35,7 @@ export default function TasksPage() {
           ))}
         </div>
       </div>
-      <div class="pt-4">
+      <div class="pt-4 h-full">
         <Show
           when={dayTasks().length > 0}
           fallback={<div class="w-fit mt-10 mx-auto">Ingen opgaver</div>}

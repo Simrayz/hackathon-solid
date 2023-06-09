@@ -3,6 +3,7 @@ import { IconClock } from "~/components/icons/IconClock";
 import { format } from "date-fns";
 import { Card } from "~/components/Card";
 import { animate } from "motion";
+import { createEffect } from "solid-js";
 
 export type Task = {
   time: Interval;
@@ -21,11 +22,17 @@ type Interval = {
 
 // We actually have a couple of task cards now...
 
-// animate(".task-card", { backgroundColor: "red" });
-
 export const TaskCard = (props: Task) => {
+  createEffect(() => {
+    animate(
+      ".taskk",
+      { opacity: [0.07, 1], y: [-20, 0], transform: "none" },
+      { easing: "ease-in-out", duration: 0.34 }
+    );
+  });
+
   return (
-    <Card class="my-4 bg-white task-card">
+    <Card class="my-4 bg-white taskk">
       <Card.Title>{props.title}</Card.Title>
       <Card.Content class="mt-2">
         <div class="flex flex-row justify-between">

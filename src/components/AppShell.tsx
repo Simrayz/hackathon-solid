@@ -16,7 +16,7 @@ export const AppShell = (props: ParentProps<Props>) => {
       <Show when={!props.hideHeader}>
         <AppHeader />
       </Show>
-      <div class="flex flex-col flex-1 px-6 overflow-auto relative">
+      <div class="flex flex-col flex-1 px-6 overflow-auto relative overflow-x-hidden">
         {props.children}
       </div>
       <BottomNav />
